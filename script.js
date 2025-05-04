@@ -71,7 +71,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   
-    // Klik tombol toggle musik
     btn.addEventListener("click", () => {
       if (music.paused) {
         music.play();
@@ -82,7 +81,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   
-    // Klik amplop
     envelope?.addEventListener("click", () => {
       if (!hasBeenOpened) {
         envelope.classList.add("open");
@@ -90,7 +88,6 @@ document.addEventListener("DOMContentLoaded", () => {
         startConfetti();
         hasBeenOpened = true;
   
-        // Tampilkan isi surat setelah animasi selesai
         setTimeout(() => {
           showLetterContent();
         }, 6000);
