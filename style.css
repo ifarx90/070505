@@ -22,7 +22,7 @@ h1 {
 
 .envelope {
   width: 400px;
-  height: 300px;
+  min-height: 300px;
   margin: 270px auto 0;
   background: #90ee90;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.25);
@@ -99,7 +99,6 @@ h1 {
 .envelope .letter {
   position: absolute;
   width: 394px;
-  height: 284px;
   background: #2e8b57;
   top: 8px;
   left: 3px;
@@ -109,6 +108,8 @@ h1 {
   animation-duration: 2s;
   animation-delay: 1.5s;
   animation-fill-mode: forwards;
+  overflow: visible;
+  padding-bottom: 24px;
 }
 
 .envelope.open .letter {
@@ -116,49 +117,12 @@ h1 {
   z-index: 1;
 }
 
-.envelope .letter:before,
-.envelope .letter:after {
-  content: '';
-  position: absolute;
-  width: 392px;
-  height: 50%;
-  left: -1px;
-  background: #2e8b57;
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  transform-origin: center top;
-}
-
-.envelope .letter:before {
-  z-index: 2;
-  border-bottom: 1px solid #90ee90;
-  animation-delay: 4s;
-}
-
-.envelope.open .letter:before {
-  animation-name: fold-up;
-}
-
-.envelope .letter:after {
-  bottom: 0;
-  transform-origin: center bottom;
-  border-top: 1px solid #90ee90;
-  animation-delay: 5s;
-}
-
-.envelope.open .letter:after {
-  animation-name: fold-down;
-}
-
 .center-letter {
-  margin: 8px;
+  padding: 24px;
   font-weight: 400;
   line-height: 180%;
   color: white;
   position: relative;
-  top: -100px;
   z-index: 5;
 }
 
@@ -195,18 +159,6 @@ h1 {
   100% {
     top: 8px;
     z-index: 3;
-  }
-}
-
-@keyframes fold-up {
-  to {
-    transform: rotateX(180deg);
-  }
-}
-
-@keyframes fold-down {
-  to {
-    transform: rotateX(-180deg);
   }
 }
 

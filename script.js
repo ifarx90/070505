@@ -12,10 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class='center-letter'>
         <h1 class="fade-in">Dear Dinduss</h1><br>
         <p class="fade-in">
-          selamat ulang tahun yaa sayaangg💚<br> 
-          Usia 20, babak baru yang pasti akan penuh cerita. aku ngga bisa bilang cukup betapa aku bangga punya kamu di hidupku. Kamu udah tumbuh jadi sosok yang kuat, dewasa, tapi tetap hangat. 
-          di tengah dunia yang sibuk dan keras, kamu tetap jadi versi terbaik dari dirimu. aku bersyukur banget karena bisa nemenin kamu sampai di titik ini, dan aku mau terus nemenin kamu seterusnya. 
-          semoga kamu selalu dikelilingi cinta, damai, dan keberanian untuk jadi diri sendiri. happy 20th, sayanggkuu. dunia jadi tempat yang lebih baik sejak kamu lahir. Maaf yaa aku belum bisa ngasih kamu sesuatu tahun ini. tapi doa dan harapanku selalu yang terbaik buat kamu—semoga kamu bahagia, sehat, dan selalu dikelilingi hal-hal baik. sekali lagi Happy birthday dinduss sayaanggg..
+          Selamat ulang tahun yaa sayaangg 💚<br><br>
+          Usia 20, babak baru yang pasti akan penuh cerita. Aku nggak bisa bilang cukup betapa aku bangga punya kamu di hidupku. Kamu udah tumbuh jadi sosok yang kuat, lembut, dan luar biasa. Di tengah dunia yang sibuk dan keras, kamu tetap jadi versi terbaik dari dirimu sendiri. Aku bersyukur banget karena bisa nemenin kamu sampai di titik ini, dan aku mau terus nemenin kamu seterusnya.<br><br>
+          Semoga kamu selalu dikelilingi cinta, damai, dan keberanian untuk jadi diri sendiri. Happy 20th, sayanggkuu. Tau ngga? Dunia jadi tempat yang lebih baik sejak kamu lahir. Asekk.<br><br>
+          Maaf yaa tahun ini cuma bisa ngasih ini lagi dan ga lebih 🙁. Tapi doa dan harapanku selalu yang terbaik buat kamu. Sekali lagi Happy Birthday dinduss sayaangg 💚
         </p>
       </div>`;
   }
