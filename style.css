@@ -5,27 +5,14 @@
 body {
   background-color: #a8e6cf;
   font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
   font-family: 'Quicksand', sans-serif;
   font-weight: 700;
   text-align: center;
-}
-
-.fade-in {
-  opacity: 0;
-  animation: smooth-reveal 2.5s ease-out forwards;
-}
-
-.center-letter {
-  margin: 8px;
-  font-weight: 400;
-  line-height: 180%;
-  color: white;
-  position: relative;
-  top: -100px;
-  z-index: 5;
 }
 
 #wrapper {
@@ -37,8 +24,8 @@ h1 {
   width: 400px;
   height: 300px;
   margin: 270px auto 0;
-  background: #90EE90;
-  box-shadow: 0 0 1px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.25);
+  background: #90ee90;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.25);
   position: relative;
   perspective: 800px;
   cursor: pointer;
@@ -51,7 +38,7 @@ h1 {
   left: 0;
   width: 0;
   height: 0;
-  border: 0 solid rgba(0,0,0,0.25);
+  border: 0 solid rgba(0, 0, 0, 0.25);
   border-width: 145px 200px;
   border-top-color: transparent;
   z-index: 2;
@@ -67,10 +54,9 @@ h1 {
 }
 
 .envelope .flap.front {
-  border-left-color: #90EE90;
-  border-right-color: #90EE90;
-  border-bottom-color: #90EE90;
-  z-index: 3;
+  border-left-color: #90ee90;
+  border-right-color: #90ee90;
+  border-bottom-color: #90ee90;
 }
 
 .envelope .flap.front:after {
@@ -82,13 +68,12 @@ h1 {
   bottom: -150px;
   border: 0 solid transparent;
   border-width: 149px 200px;
-  border-bottom-color: #90EE90;
+  border-bottom-color: #90ee90;
 }
 
 .envelope .flap.top {
   border-top-width: 55px;
   border-top-color: #aaa;
-  z-index: 3;
   animation-duration: 1s;
   animation-fill-mode: forwards;
   transform-origin: center top;
@@ -108,18 +93,18 @@ h1 {
   height: 0;
   border: 0 solid transparent;
   border-width: 154px 200px;
-  border-top-color: #90EE90;
+  border-top-color: #90ee90;
 }
 
 .envelope .letter {
   position: absolute;
   width: 394px;
   height: 284px;
-  background: #2E8B57;
+  background: #2e8b57;
   top: 8px;
   left: 3px;
-  border-left: 1px solid #90EE90;
-  border-right: 1px solid #90EE90;
+  border-left: 1px solid #90ee90;
+  border-right: 1px solid #90ee90;
   z-index: 1;
   animation-duration: 2s;
   animation-delay: 1.5s;
@@ -138,18 +123,18 @@ h1 {
   width: 392px;
   height: 50%;
   left: -1px;
-  background: #2E8B57;
+  background: #2e8b57;
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
   animation-duration: 1s;
-  animation-delay: 4s;
   animation-fill-mode: forwards;
   transform-origin: center top;
 }
 
 .envelope .letter:before {
   z-index: 2;
-  border-bottom: 1px solid #90EE90;
+  border-bottom: 1px solid #90ee90;
+  animation-delay: 4s;
 }
 
 .envelope.open .letter:before {
@@ -157,65 +142,24 @@ h1 {
 }
 
 .envelope .letter:after {
-  animation-delay: 5s;
-  transform-origin: center bottom;
   bottom: 0;
+  transform-origin: center bottom;
+  border-top: 1px solid #90ee90;
+  animation-delay: 5s;
 }
 
 .envelope.open .letter:after {
   animation-name: fold-down;
-  border-top: 1px solid #90EE90;
 }
 
-@keyframes flip {
-  100% {
-    transform: rotateX(180deg);
-    z-index: 1;
-  }
-}
-
-@keyframes remove {
-  50% { top: -270px; }
-  100% { top: 8px; z-index: 3; }
-}
-
-@keyframes fold-up {
-  to { transform: rotateX(180deg); }
-}
-
-@keyframes fold-down {
-  to { transform: rotateX(-180deg); }
-}
-
-@keyframes smooth-reveal {
-  0% {
-    opacity: 0;
-    transform: scale(0.9) translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
-}
-
-.animate-reveal {
-  opacity: 0;
-  animation: smooth-reveal 1.8s ease-out forwards;
-}
-
-.animate-first {
-  animation-delay: 5600ms;
-}
-
-.animate-second {
+.center-letter {
+  margin: 8px;
+  font-weight: 400;
+  line-height: 180%;
+  color: white;
   position: relative;
   top: -100px;
-  animation-delay: 7000ms;
-}
-
-.fade-in {
-  opacity: 0;
-  animation: smooth-reveal 3s ease-out forwards;
+  z-index: 5;
 }
 
 #music-toggle {
@@ -232,4 +176,47 @@ h1 {
   cursor: pointer;
 }
 
+.fade-in {
+  opacity: 0;
+  animation: smooth-reveal 3s ease-out forwards;
+}
 
+@keyframes flip {
+  100% {
+    transform: rotateX(180deg);
+    z-index: 1;
+  }
+}
+
+@keyframes remove {
+  50% {
+    top: -270px;
+  }
+  100% {
+    top: 8px;
+    z-index: 3;
+  }
+}
+
+@keyframes fold-up {
+  to {
+    transform: rotateX(180deg);
+  }
+}
+
+@keyframes fold-down {
+  to {
+    transform: rotateX(-180deg);
+  }
+}
+
+@keyframes smooth-reveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}

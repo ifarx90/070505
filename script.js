@@ -9,57 +9,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function getBirthdayMessageHTML() {
     return `
-        <div class='center-letter'>
-          <h1 class="fade-in" style="animation-delay: 0s;">Dear Dinduss</h1><br>
-          <p class="fade-in" style="animation-delay: 2s;">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis accusamus veniam labore illo nihil dicta doloribus reprehenderit harum? Dolores eveniet consectetur repudiandae eligendi nesciunt beatae facere sapiente quod magni possimus?
-Itaque repellendus, quis quaerat quidem commodi quod. Inventore, necessitatibus repellendus libero est quam eum cupiditate non earum optio fugit facilis animi nesciunt, quasi iure maxime at ex atque ut impedit commodi? Eum, dolorum
-voluptate rerum accusamus architecto porro impedit praesentium.
-
-          </p>
-        </div>`;
+      <div class='center-letter'>
+        <h1 class="fade-in">Dear Dinduss</h1><br>
+        <p class="fade-in">
+          selamat ulang tahun yaa sayaangg💚<br> 
+          Usia 20, babak baru yang pasti akan penuh cerita. aku ngga bisa bilang cukup betapa aku bangga punya kamu di hidupku. Kamu udah tumbuh jadi sosok yang kuat, dewasa, tapi tetap hangat. 
+          di tengah dunia yang sibuk dan keras, kamu tetap jadi versi terbaik dari dirimu. aku bersyukur banget karena bisa nemenin kamu sampai di titik ini, dan aku mau terus nemenin kamu seterusnya. 
+          semoga kamu selalu dikelilingi cinta, damai, dan keberanian untuk jadi diri sendiri. happy 20th, sayanggkuu. dunia jadi tempat yang lebih baik sejak kamu lahir. Maaf yaa aku belum bisa ngasih kamu sesuatu tahun ini. tapi doa dan harapanku selalu yang terbaik buat kamu—semoga kamu bahagia, sehat, dan selalu dikelilingi hal-hal baik. sekali lagi Happy birthday dinduss sayaanggg..
+        </p>
+      </div>`;
   }
 
   function showLetterContent() {
     letter.innerHTML = getBirthdayMessageHTML();
-
-    const h1 = letter.querySelector("h1.fade-in");
-    const p = letter.querySelector("p.fade-in");
-
-    if (h1) {
-      h1.style.opacity = "0";
-      h1.style.animation = "smooth-reveal 1.5s ease-out forwards";
-      h1.style.animationDelay = "0s";
-    }
-
-    if (p) {
-      p.style.opacity = "0";
-      p.style.animation = "smooth-reveal 1.5s ease-out forwards";
-      p.style.animationDelay = "2s";
-    }
   }
 
   function startConfetti() {
-    const duration = 5 * 1000;
+    const duration = 5000;
     const end = Date.now() + duration;
 
     (function frame() {
-      confetti({
-        particleCount: 7,
-        angle: 60,
-        spread: 55,
-        origin: { x: 0 },
-      });
-      confetti({
-        particleCount: 7,
-        angle: 120,
-        spread: 55,
-        origin: { x: 1 },
-      });
+      confetti({ particleCount: 7, angle: 60, spread: 55, origin: { x: 0 } });
+      confetti({ particleCount: 7, angle: 120, spread: 55, origin: { x: 1 } });
 
-      if (Date.now() < end) {
-        requestAnimationFrame(frame);
-      }
+      if (Date.now() < end) requestAnimationFrame(frame);
     })();
   }
 
@@ -87,10 +60,7 @@ voluptate rerum accusamus architecto porro impedit praesentium.
       playMusicOnce();
       startConfetti();
       hasBeenOpened = true;
-
-      setTimeout(() => {
-        showLetterContent();
-      }, 6000);
+      setTimeout(showLetterContent, 6000);
     }
   });
 });
